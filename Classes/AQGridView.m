@@ -121,6 +121,17 @@ NSString * const AQGridViewSelectionDidChangeNotification = @"AQGridViewSelectio
 	_flags.contentSizeFillsBounds = 1;
 }
 
+- (id)init
+{
+    self = [super init];
+	if ( self == nil )
+		return ( nil );
+
+	[self _sharedGridViewInit];
+
+	return ( self );
+}
+
 - (id)initWithFrame: (CGRect) frame
 {
     self = [super initWithFrame:frame];
